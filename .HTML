@@ -1,0 +1,1537 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Donor Finder Application</title>
+</head>
+
+<body>
+    <div class="main-header">
+        <p onclick="backhome2()">Home</p>
+        <p onclick="blooddonor2()">Blood Donor</p>
+        <p onclick="registerdonor2()">Register as Donor</p>
+        <p onclick="about()"> About</p>
+    </div>
+
+    <div class="main-div">
+        <!--i need a blood -->
+        <div class="home">
+            <div id="blood-div" class="blood-div">
+                <div onclick="needBlood()" class="need-blood">
+                    <button  style="text-align: center; color: white; background: red; border: none;" > <h1>I need blood</h1></button>
+                </div>
+            </div>
+            <!--OR-->
+
+            <div id="or">
+                <div id="or2">
+                    <h1> or</h1>
+                </div>
+            </div>
+            <!--register as donor-->
+
+            <div class="register" onclick="registerme()" style="display: flex; justify-content:center;">
+                <div id="register2" style="background: red;">
+                    <button style="text-align: center; color: white; background: red; border: none;" ><h1 style="font-size: 25px;">Register as donor</h1></button>
+                </div>
+
+            </div>
+
+
+
+            <div class="main-background">
+                <div class="bottom-background">
+
+                </div>
+            </div>
+
+        </div>
+
+        <!--form-->
+
+        <div class="form" id="form" style="display: none;">
+
+            <div class="form-div-2">
+                <div class="input">
+
+                    <label for="district">Select a District:</label><br>
+                    <select class="district" name="district">
+        <option value="">--Select District--</option>
+        <option value="agra">Agra</option>
+        <option value="aligarh">Aligarh</option>
+        <option value="allahabad">Allahabad</option>
+        <option value="ambedkarnagar">Ambedkarnagar</option>
+        <option value="amu">Amroha</option>
+        <option value="auraiya">Auraiya</option>
+        <option value="ayodhya">Ayodhya</option>
+        <option value="badayun">Badaun</option>
+        <option value="bahraich">Bahraich</option>
+        <option value="banda">Banda</option>
+        <option value="barabanki">Barabanki</option>
+        <option value="bareilly">Bareilly</option>
+        <option value="bijnor">Bijnor</option>
+        <option value="bulandshahr">Bulandshahr</option>
+        <option value="chandauli">Chandauli</option>
+        <option value="chitrakoot">Chitrakoot</option>
+        <option value="deoria">Deoria</option>
+        <option value="etah">Etah</option>
+        <option value="etawah">Etawah</option>
+        <option value="faizabad">Faizabad</option>
+        <option value="farrukhabad">Farrukhabad</option>
+        <option value="fatehpur">Fatehpur</option>
+        <option value="firozabad">Firozabad</option>
+        <option value="gauriganj">Gauriganj</option>
+        <option value="ghaziabad">Ghaziabad</option>
+        <option value="ghazipur">Ghazipur</option>
+        <option value="gonda">Gonda</option>
+        <option value="gorakhpur">Gorakhpur</option>
+        <option value="hamirpur">Hamirpur</option>
+        <option value="hardoi">Hardoi</option>
+        <option value="hapur">Hapur</option>
+        <option value="jalaun">Jalaun</option>
+        <option value="jaunpur">Jaunpur</option>
+        <option value="jhansi">Jhansi</option>
+        <option value="kanpur">Kanpur</option>
+        <option value="kanpur_dehat">Kanpur Dehat</option>
+        <option value="kushinagar">Kushinagar</option>
+        <option value="lakhimpur_kheri">Lakhimpur Kheri</option>
+        <option value="lakhnau">Lucknow</option>
+        <option value="maharajganj">Maharajganj</option>
+        <option value="mahoba">Mahoba</option>
+        <option value="mandi">Mandi</option>
+        <option value="mathura">Mathura</option>
+        <option value="meerut">Meerut</option>
+        <option value="mirzapur">Mirzapur</option>
+        <option value="mau">Mau</option>
+        <option value="moradabad">Moradabad</option>
+        <option value="muzaffarnagar">Muzaffarnagar</option>
+        <option value="pilibhit">Pilibhit</option>
+        <option value="raebareli">Raebareli</option>
+        <option value="rampur">Rampur</option>
+        <option value="saharanpur">Saharanpur</option>
+        <option value="shahjahanpur">Shahjahanpur</option>
+        <option value="shrawasti">Shrawasti</option>
+        <option value="siddharthnagar">Siddharthnagar</option>
+        <option value="sitapur">Sitapur</option>
+        <option value="sonbhadra">Sonbhadra</option>
+        <option value="sultanpur">Sultanpur</option>
+        <option value="unnao">Unnao</option>
+        <option value="varanasi">Varanasi</option>
+    </select>
+
+
+                </div>
+
+                <div class="input">
+                    <label  name="blood-group" for="five">Select blood group</label><br />
+
+                    <select   class="group" placeholder="Gender" name="Blood group">
+            <option value=""> --Select blood group--</option>
+            <option  value="A positive">A positive (A+)</option>
+            <option value="A negative">A negative (A-)</option>
+            <option value="B positive">B positive (B+)</option>
+            <option value="B negative">B negative (B-)</option>
+            <option value="O positive">O positive (O+)</option>
+            <option value="O negative">O negative (O-)</option>
+            <option value="AB positive">AB positive (AB)</option>
+            <option value="AB negative">AB negative (AB-)</option></select><br />
+                </div>
+
+
+                <!--  <div class="input">
+          <label for="pincode">Enter pincode</label><br />
+           <input placeholder="enter your pincode" type="number" class="pinecode" name="pincode" required /><br />
+        </div>-->
+                <div onclick="redisterdonor()"><button  style="text-align: center;  background: rgb(8, 194, 51); padding:5px 100px; margin: 15px 5px  5px 5px;" onclick="find()" onclick="find2()" >Find</button></div><br>
+                <div class="back" style="display: flex; justify-content: flex-end; ">
+                    <button style="text-align: center; padding:2px 10px; margin-top: 5px;  background: red;
+    border: 2px solid darkred; border-radius: 3px;" onclick="back()">back</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!--star himanshu kashyap-->
+
+        <div id="form2">
+            <div class="card" id="find" style="display: none ;">
+
+                <p>Click on the icons to call or whatsapp these users:</p>
+                <div class="user"></div>
+                <div class="find-div"></div>
+
+
+                <div class="back" style="display: flex; justify-content: flex-end; ">
+                    <button style="text-align: center; padding:2px 10px; margin-top: 5px;  background: red;
+    border: 2px solid darkred; border-radius: 3px;" onclick="backhome()">back</button>
+
+                </div>
+
+            </div>
+
+            <!---register div-->
+            <div class="main-form" style="display: none;">
+                <div class="register-form" style="background: lightgray; ">
+
+
+                    <div class="input2">
+                        <label for="district2">Select a District:</label><br>
+                        <select id="district2" name="district">
+        <option value="">--Select District--</option>
+        <option value="agra">Agra</option>
+        <option value="aligarh">Aligarh</option>
+        <option value="allahabad">Allahabad</option>
+        <option value="ambedkarnagar">Ambedkarnagar</option>
+        <option value="amu">Amroha</option>
+        <option value="auraiya">Auraiya</option>
+        <option value="ayodhya">Ayodhya</option>
+        <option value="badayun">Badaun</option>
+        <option value="bahraich">Bahraich</option>
+        <option value="banda">Banda</option>
+        <option value="barabanki">Barabanki</option>
+        <option value="bareilly">Bareilly</option>
+        <option value="bijnor">Bijnor</option>
+        <option value="bulandshahr">Bulandshahr</option>
+        <option value="chandauli">Chandauli</option>
+        <option value="chitrakoot">Chitrakoot</option>
+        <option value="deoria">Deoria</option>
+        <option value="etah">Etah</option>
+        <option value="etawah">Etawah</option>
+        <option value="faizabad">Faizabad</option>
+        <option value="farrukhabad">Farrukhabad</option>
+        <option value="fatehpur">Fatehpur</option>
+        <option value="firozabad">Firozabad</option>
+        <option value="gauriganj">Gauriganj</option>
+        <option value="ghaziabad">Ghaziabad</option>
+        <option value="ghazipur">Ghazipur</option>
+        <option value="gonda">Gonda</option>
+        <option value="gorakhpur">Gorakhpur</option>
+        <option value="hamirpur">Hamirpur</option>
+        <option value="hardoi">Hardoi</option>
+        <option value="hapur">Hapur</option>
+        <option value="jalaun">Jalaun</option>
+        <option value="jaunpur">Jaunpur</option>
+        <option value="jhansi">Jhansi</option>
+        <option value="kanpur">Kanpur</option>
+        <option value="kanpur_dehat">Kanpur Dehat</option>
+        <option value="kushinagar">Kushinagar</option>
+        <option value="lakhimpur_kheri">Lakhimpur Kheri</option>
+        <option value="lakhnau">Lucknow</option>
+        <option value="maharajganj">Maharajganj</option>
+        <option value="mahoba">Mahoba</option>
+        <option value="mandi">Mandi</option>
+        <option value="mathura">Mathura</option>
+        <option value="meerut">Meerut</option>
+        <option value="mirzapur">Mirzapur</option>
+        <option value="mau">Mau</option>
+        <option value="moradabad">Moradabad</option>
+        <option value="muzaffarnagar">Muzaffarnagar</option>
+        <option value="pilibhit">Pilibhit</option>
+        <option value="raebareli">Raebareli</option>
+        <option value="rampur">Rampur</option>
+        <option value="saharanpur">Saharanpur</option>
+        <option value="shahjahanpur">Shahjahanpur</option>
+        <option value="shrawasti">Shrawasti</option>
+        <option value="siddharthnagar">Siddharthnagar</option>
+        <option value="sitapur">Sitapur</option>
+        <option value="sonbhadra">Sonbhadra</option>
+        <option value="sultanpur">Sultanpur</option>
+        <option value="unnao">Unnao</option>
+        <option value="varanasi">Varanasi</option>
+    </select>
+
+
+                    </div>
+                    <div class="input2">
+                        <label name="blood-group2" for="blood-group2">Select blood group</label><br />
+                        <select id="blood-group2" class="group2" placeholder="Gender" name="Blood group2">
+
+            <option value="">-- Select blood group--
+            </option>
+						<option value="A positive">A positive (A+)</option>
+						<option value="A negative">A negative (A-)</option>
+						<option value="B positive">B positive (B+)</option>
+						<option value="B negative">B negative (B-)</option>
+						<option value="O positive">O positive (O+)</option>
+						<option value="O negative">O negative (O-)</option>
+						<option value="AB positive">AB positive (AB)</option>
+						<option value="AB negative">AB negative (AB-)</option>
+					</select><br />
+                    </div>
+
+                    <div class="input2">
+                        <label for="name2" name="name"> Name </label><br>
+                        <input type="text" id="name2" placeholder="name" name="name" required />
+                    </div>
+
+
+                    <div class="input2">
+                        <label for="contact2" name="contact"> Contact no </label><br>
+
+                        <input type="tel" id="contact2" placeholder="contact no" name="contact" required />
+                    </div>
+
+                    <div class="input2">
+                        <label for="whatsapp-no" name="whatsapp-no">Whatsapp no </label>
+                        <p style="font-size: 10px; display: inline;">same as above</p>
+                        <input type="checkbox" style="width: 20px;"onclick="updateInput()" /><br>
+                        <input type="number" id="whatsapp-no2" placeholder="Enter whatsapp no" name="whatsapp-no"  maxlength="7"required>
+                    </div>
+
+
+                    <div onclick="input()"class='register2'
+                        style="display: flex;  justify-content: center; align-items: center; margin-bottom: 5px;">
+                        <button style=" background: rgb(8, 194, 51); width: 200px; padding:5px 50px; margin: 20px 0px 5px 0px;" onclick="submit()">Register me</button><br>
+                    </div>
+
+                    <div class="back2" style="display: flex; justify-content: flex-end; ">
+                        <button style="text-align: center; padding:2px 10px; margin-top: 5px;  background: red;
+    border: 2px solid darkred; border-radius: 3px;" onclick="back2()">back</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="form4">
+            <div class="registerform" style="display: none;">
+
+            </div>
+
+            <div id="about" style="display: none;">
+                <div class="about" style=" height: 100vh;display:flex; justify-content:center; align-items: center;">
+                    <div class="detail"
+                        style="background: lightgray; border: 3px solid black; border-radius: 7px;width: 300px; padding:10px;">
+                        <h1 style="text-align:center; ">
+                            Codeyogi</h1>
+                        <p style="font-size:;"> CodeYogi is an online platform that offers coding tutorials, courses,
+                            and learning resources to help individuals develop programming and technical skills. It
+                            focuses on teaching various programming languages, software development concepts, and other
+                            technology-related topics, such as web development, data structures, and algorithms.
+                            CodeYogi often targets beginners, intermediate learners, and professionals looking to
+                            enhance their coding abilities, offering interactive content and projects to reinforce
+                            learning.
+
+                            The platform is designed to provide a hands-on approach to learning programming and tech
+                            skills.
+
+                        </p>
+
+                        <h4 style="margin: 20px 0  5px 0; text-align: center;font-size:15px;">this project was made to
+                            showcase our skill</h4>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <style>
+            input {
+                padding: 6px;
+                border-radius: 6px;
+                background: rgb(193, 195, 199);
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+            }
+
+            select {
+                padding: 6px;
+                border-radius: 6px;
+                background: rgb(193, 195, 199);
+                width: 100%;
+            }
+
+            .main-header p {
+                color: white;
+            }
+
+            label {
+                font-size: 13px;
+            }
+
+            .main-header {
+                background: rgb(235, 9, 51);
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            body {
+
+
+                background: url("https://i.ibb.co/RzbPgMR/Screenshot-2024-11-05-18-57-12-255-com-chrome-beta-2.jpg");
+
+            }
+
+
+            .blood-div {
+                courser: pointer;
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .need-blood {
+                width: 70%;
+                padding: 10px;
+                max-width: 500px;
+                border-radius: 99px;
+                background: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .register-form {
+                max-width: 400px;
+                border: 2px solid black;
+                border-radius: 10px;
+                padding: 20px;
+
+            }
+
+            .form {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                margin-top: 120px;
+                height: 50vh;
+            }
+
+            .form .input {
+                margin: 10px;
+            }
+
+            .form-div-2 {
+                max-width: 400px;
+                border: 2px solid black;
+                border-radius: 10px;
+                padding: 5px;
+                background: lightgrey;
+            }
+
+            .main-form {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                margin-top: 120px;
+                height: 50vh;
+            }
+
+            .main-form .input2 {
+                margin: 10px;
+            }
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .main {
+                border: 3px solid gray;
+                border-radius: 6px;
+                background: lightgray;
+                display: flex;
+                width: 250px;
+                height: 60px;
+                margin: 15px;
+                padding: 10px 0px 10px 5px;
+            }
+
+            .main-div {}
+
+            .user-detail {
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #link {
+                display: flex;
+                justify-content: center;
+            }
+
+            .registerform {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                margin-top: 120px;
+                height: 50vh;
+            }
+
+            .card p {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                font-size: 15px;
+            }
+
+            .user-detail h2 {
+                display: flex;
+                padding: 2px;
+                font-size: 10px;
+                color: black;
+            }
+
+            h4 {
+                display: flex;
+                padding: 2px;
+                font-size: 10px;
+                color: black;
+            }
+
+            .call,
+            .call2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .call img {
+                margin: 10px 10px 10px 0px;
+            }
+
+            #or {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 40px;
+            }
+
+            #or2 h1 {
+                color: red;
+            }
+
+            #register {
+                courser: pointer;
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #register2 {
+                width: 70%;
+                padding: 10px;
+                max-width: 500px;
+                border-radius: 99px;
+                background: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /*regiter submit*/
+            .registerform2 {
+                border: 5px solid black;
+                color: black;
+                background: lightgray;
+                display: flex;
+                flex-direction: column;
+                width: 250px;
+                margin: 15px;
+                padding: 10px;
+                border-radius: 20px;
+            }
+
+            #link {
+                display: flex;
+                justify-content: center;
+            }
+          h1,p,a,h2,h3,h4,h5,h6{
+            cursor: pointer;
+          }
+            .registerform2 .p {
+                margin: 5px;
+                display: inline-block;
+                background: rgb(12, 242, 39);
+                border: 2px solid rgb(12, 242, 39);
+                color: white;
+                border-radius: 99px;
+                justify-content: center;
+                padding: 0 10px;
+            }
+
+            p {
+                display: flex;
+                justify-content: center;
+            }
+
+            .registerform2 h2 {
+                display: flex;
+                padding: 6px;
+                font-size: 15px;
+            }
+
+            .bottom-background {
+                padding: 10px;
+                margin-top: 5%;
+                background: url("https://i.ibb.co/mJXJGx2/blood-1.png") no-repeat bottom center;
+                width: 100%;
+            }
+
+            @media (max-width: 400px) {
+                .bottom-background {
+                    width: 100%;
+                }
+
+            }
+
+            @media(min-width: 100px) {
+                .bottom-background {
+                    width: 400px;
+                    height: 400px;
+                }
+
+            }
+
+            .main-background {
+
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+        <script>
+            function updateInput(){
+        
+                  var input1Value = document.getElementById('contact2').value;
+            document.getElementById('whatsapp-no2').value = input1Value;
+ 
+      }
+      
+		function needBlood() {
+			let form = document.getElementById("form").style.display = "flex";
+			let needBlood = document.querySelector(".home").style.display = "none"
+      let backgroumd = document.querySelector(".main-background").style.display ="none" 
+		
+      
+        let about = document.getElementById("about").style.display="none"
+      }
+
+		function back() {
+			let back = document.getElementById("form").style.display = "none"
+			let needBlood = document.querySelector(".home").style.display = "block"
+      
+      let backgroumd = document.querySelector(".main-background").style.display ="flex"
+	
+        let about = document.getElementById("about").style.display="none"
+      
+      }
+          
+     let blood = document.querySelector('.group').value
+
+      
+      const donors =[
+    
+           {
+          name: "Arpit vasishta",
+          blood: "A positive",
+          phone:"7017413829",
+          whatsapp: "7017413829",
+          district: "saharanpur",
+        },
+        {
+          
+          name: "Anika sharma",
+          blood: "A positive",
+          phone:"7078413829",
+          whatsapp: "7078413829",
+          district: "saharanpur",
+        },
+         {
+          name: "Ruppa Sharma",
+          blood: "A positive",
+          phone:"",
+          whatsapp:"",
+          district: "saharanpur",
+        },
+        {
+          name: "Akshay Sharma",
+          blood: "A positive",
+          phone:"7454812496",
+          whatsapp: "745481296",
+          district: "Muzaffarnagar",
+        },
+        {
+          name: "Astha Sharma",
+          blood: "A positive",
+          phone:"7310921247",
+          whatsapp: "7310921247",
+          district: "Muzaffarnagar",
+        },
+        {
+          
+          name: "Sanjay sharma",
+          blood: "A negative",
+          phone:"8864945378",
+          whatsapp: "8864945378",
+          district: "Muzaffarnagar",
+        },
+         {
+          name: "Neeraj Sharma",
+          blood: "A negative",
+          phone:"9358855965",
+          whatsapp: "9358855965",
+          district: "Muzaffarnagar",
+        },
+        {
+          name: "Vaidik Tyagi",
+          blood: "A negative",
+          phone:"7983378833",
+          whatsapp: "7983378833",
+          district: "Muzaffarnagar",
+        },
+           {
+          name: "Harsh Kaushik",
+          blood: "B positive",
+          phone:"8267991060",
+          whatsapp: "8267991060",
+          district: "Muzaffarnagar",
+        },
+        {
+          
+          name: "Sethpal Shing",
+          blood: "B positive",
+          phone:"8445674477",
+          whatsapp: "8445674477",
+          district: "Muzaffarnagar",
+        },
+         {
+          name: "Preeven vasishta",
+          blood: "B positive",
+          phone:"9997427647",
+          whatsapp: "9997427647",
+          district: "Meerut",
+        },
+        {
+          name: "raju",
+          blood: "B positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "meerut",
+        },
+       
+        {
+          name: "Seema rajput",
+          blood: "O positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "Meerut",
+        },
+        {
+          name: "Raaj",
+          blood: "O negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "meerut",
+        },
+        {
+          
+          name: "Smeer Khan",
+          blood: "O negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+         {
+          name: "Jatandeep Singh",
+          blood: "O negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          name: "Monu rajput",
+          blood: "O negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          name: "Raam Singh",
+          blood: "AB positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          
+          name: "Rambeer",
+          blood: "AB positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+         {
+          name: "Jatandeep Singh",
+          blood: "AB positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+        {
+          name: "Aman rajput",
+          blood: "AB positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "shmali",
+        },
+        {
+          name: "Sanju",
+          blood: "AB negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "shamli",
+        },
+        {
+          
+          name: "Gorav Kashyap",
+          blood: "AB negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "Shmali",
+        },
+         {
+          name: "Veer Partaap",
+          blood: "AB negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "Shamli",
+        },
+        {
+          name: "Partaapo rajput",
+          blood: "AB negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "saharanpur",
+        },
+         {
+          name: "Anshul sain",
+          blood: "A positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          
+          name: "Jeet kumar",
+          blood: "A positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+         {
+          name: "Lallit jatav",
+          blood: "A positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "Kunal",
+          blood: "A positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "Anjali",
+          blood: "A negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          
+          name: "Sajay dat",
+          blood: "A negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+         {
+          name: "Lallit Yadav",
+          blood: "A negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "Kunal rajput",
+          blood: "A negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+           {
+          name: "himanshu",
+          blood: "B positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          
+          name: "Monu",
+          blood: "B positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+         {
+          name: "Lavish jatav",
+          blood: "B positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "raju",
+          blood: "B positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "Anjali Kumari",
+          blood: "B negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          
+          name: "Sajay dat",
+          blood: "B negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+         {
+          name: "Lallit Yadav",
+          blood: "B negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "Kunal rajput",
+          blood: "B negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+         {
+          name: "Komal Rani",
+          blood: "O positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          
+          name: "Salaman Khan",
+          blood: "O positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+         {
+          name: "Jatandeep Singh",
+          blood: "O positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "Seema rajput",
+          blood: "O positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "Raaj",
+          blood: "O negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          
+          name: "Smeer Khan",
+          blood: "O negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+         {
+          name: "Jatandeep Singh",
+          blood: "O negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "Monu rajput",
+          blood: "O negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "Raam Singh",
+          blood: "AB positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agrar",
+        },
+        {
+          
+          name: "Rambeer",
+          blood: "AB positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+         {
+          name: "Jatandeep Singh",
+          blood: "AB positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "Aman rajput",
+          blood: "AB positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "Sanju",
+          blood: "AB negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          
+          name: "Gorav Kashyap",
+          blood: "AB negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+         {
+          name: "Veer Partaap",
+          blood: "AB negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        {
+          name: "Partaapo rajput",
+          blood: "AB negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "agra",
+        },
+        
+         {
+          name: "jagpal sain",
+          blood: "A positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          
+          name: "Jeet kumar",
+          blood: "A positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+         {
+          name: "Sunil jatav",
+          blood: "A positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "Kunal",
+          blood: "A positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "Anjali",
+          blood: "A negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          
+          name: "Sajay dat",
+          blood: "A negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+         {
+          name: "Lallit Yadav",
+          blood: "A negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "Kunal rajput",
+          blood: "A negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+           {
+          name: "himanshu",
+          blood: "B positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          
+          name: "Monu",
+          blood: "B positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+         {
+          name: "Lavish jatav",
+          blood: "B positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "raju",
+          blood: "B positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "Priya Kumari",
+          blood: "B negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          
+          name: "Sajay dat",
+          blood: "B negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+         {
+          name: "Lallit Yadav",
+          blood: "B negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "Kunal rajput",
+          blood: "B negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+         {
+          name: "Ansari bhai",
+          blood: "O positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          
+          name: "Salaman Khan",
+          blood: "O positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+         {
+          name: "Jatandeep Singh",
+          blood: "O positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "Seema rajput",
+          blood: "O positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "Raaj",
+          blood: "O negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          
+          name: "Smeer Khan",
+          blood: "O negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+         {
+          name: "Jatandeep Singh",
+          blood: "O negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "Monu rajput",
+          blood: "O negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "Raam Singh",
+          blood: "AB positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          
+          name: "Rambeer",
+          blood: "AB positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+         {
+          name: "Jatandeep Singh",
+          blood: "AB positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "Aman rajput",
+          blood: "AB positive",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "Sanju",
+          blood: "AB negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          
+          name: "Gorav Kashyap",
+          blood: "AB negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+         {
+          name: "Veer Partaap",
+          blood: "AB negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        {
+          name: "Partaapo rajput",
+          blood: "AB negative",
+          phone:"9536334389",
+          whatsapp: "9536334389",
+          district: "aligarh",
+        },
+        ];
+          
+		function find() {
+      
+      var district = document.querySelector('.district').value;
+      
+     var blood = document.querySelector('.group').value
+      console.log(blood)
+      
+      if(district == '' || blood ==''){
+        alert('all input are mandatory')
+        return false;
+      }else{
+        true;
+      }
+      
+			let form = document.getElementById("form").style.display = "none";
+			//DICTRICT DETAIL\\
+			let find = document.getElementById("find").style.display = "flex"
+      let main = document.querySelector('.find-div')
+            
+      main.innerHTML=``  
+ 
+      
+      const donorlist = donors.filter(
+    (donor) =>  donor.blood === blood && donor.district === district
+              );
+      
+      if(donorlist.length === 0){
+        
+        main.innerHTML =`<div style="height: 400px; display: flex; justify-content: center; align-items: center;"><p style="color: red; font-size: 30px;">donor not found</p><div>`
+      }else{
+      
+console.log(donorlist)
+      for(let i = 0; i <= donorlist.length;i++){
+        let div = document.createElement("div")
+        div.className="main"
+        
+      let nameo =  `${donorlist[i].name}`
+      console.log(nameo)
+        
+        let bloodo = `${donorlist[i].blood}`
+        
+        let districto = `${donorlist[i].district}`
+        
+        let phoneo = `${donorlist[i].phone}`
+        
+        let whatsappo = `${donorlist[i].whatsapp}`
+        
+        div.innerHTML=`
+         
+        <div class="user-detail">
+        <h4>NAME:${nameo}</h4> 
+        <h2>District: ${districto}</h2>  
+        <h2>Blood group: ${bloodo}</h2>
+        </div>
+        <div class="call">
+       <a href="tel:+91${phoneo}">   <img style="width: 40px;"src="https://cdn-icons-png.flaticon.com/128/5585/5585856.png"/></a>
+       <a href="https://wa.me/+91${whatsappo}">     <img style="width:40px;"src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png"/></a>
+        </div>
+     ` 
+        main.appendChild(div)
+        
+        console.log(div)
+      }
+
+      }
+      };
+      
+   
+      
+ 
+		function backhome() {
+			let find = document.getElementById("find").style.display = "none"
+			let needBlood2 = document.querySelector(".home").style.display = "block"
+      
+      let backgroumd = document.querySelector(".main-background").style.display ="flex"
+		}
+
+      
+      
+		function back3() {
+      
+           let form = document.querySelector(".registerform").style.display="none"
+    
+      
+			let registerby = document.querySelector(".main-form").style.display = "none"
+			let needBlood2 = document.querySelector(".home").style.display = "block"
+      
+      let backgroumd = document.querySelector(".main-background").style.display ="flex"
+		}
+      
+      
+		function registerme() {
+      
+			let registerby = document.querySelector(".main-form").style.display = "flex"
+			let needBlood2 = document.querySelector(".home").style.display = "none"
+      
+      let backgroumd = document.querySelector(".main-background").style.display ="none"
+		}
+
+		function back2() {
+			let registerby = document.querySelector(".main-form").style.display = "none"
+			let needBlood2 = document.querySelector(".home").style.display = "block"
+      
+      let backgroumd = document.querySelector(".main-background").style.display ="flex"
+    
+		}    
+     
+      	function submit() {
+  
+          	    let name = document.getElementById("name2").value
+       
+			let district = document.getElementById("district2").value
+			
+      
+      let bloodgroup=document.getElementById("blood-group2").value
+	
+  
+      
+      let contact = document.getElementById("contact2").value
+      
+      
+      let whatsapp = document.getElementById("whatsapp-no2").value
+     
+          
+      if(name == "" || district == "" ||  bloodgroup == ""|| contact == "" || whatsapp == "" ){
+        alert('all input are mandatory')
+        return false;
+      }else if(whatsapp.length > 10 || whatsapp.length < 10 || contact.length > 10 || contact.length < 10){
+        alert("Number should be of 10 digit ! Please enter valid number")
+        return false;
+      }else{
+        true;
+      }
+          
+              let object = {
+          name:`${name}`,
+          blood:`${bloodgroup}`,
+          phone:`${contact}`,
+          whatsapp:`${whatsapp}`,
+          district:`${district}`,
+        };
+      
+      
+              donors.push(object)
+ 
+   
+      let registerby = document.querySelector(".main-form").style.display = "none"
+      
+      let form = document.querySelector(".registerform").style.display="flex"
+      
+      let  formdiv = document.querySelector(".registerform") 
+      
+      formdiv.inerHTML=``
+          formdiv.innerHTML=`
+      <div class="registerform2 ">
+  <img
+    src="https://i.ibb.co/ZMpt5VC/download-1.jpg"
+    alt="codeyogi"
+    style="width: 100px; height: 100px; align-self: center; border: 2px solid green; border-radius: 99px;"
+  />
+  <p>PROFILE</p>
+  <h2>Name: ${name} </h2>
+        <h2>District: ${district} </h2>
+<h2> Blood-group: ${bloodgroup}
+</h2>
+<h2>Phone No: ${contact} </h2>
+<h2>Whatsapp No: ${whatsapp} </h2>
+  <div id="link">
+    <p class="p" onclick="back3()" style="background: red;">Back</p>
+  </div>
+      </div>`
+         
+		
+		}
+      
+      function backhome2(){
+        let home = document.querySelector(".home").style.display="block"
+           let backgroumd = document.querySelector(".main-background").style.display ="flex" 
+           
+           let form = document.querySelector(".registerform").style.display="none"
+    
+
+			let registerby = document.querySelector(".main-form").style.display = "none"
+      
+      	let find = document.getElementById("find").style.display = "none"
+
+       		let back = document.getElementById("form").style.display = "none"
+          
+        let about = document.getElementById("about").style.display="none"
+      }
+      
+      function blooddonor2(){
+        let home = document.querySelector(".home").style.display="none"
+           let backgroumd = document.querySelector(".main-background").style.display ="none" 
+           
+           let form = document.querySelector(".registerform").style.display="none"
+    
+
+			let registerby = document.querySelector(".main-form").style.display = "none"
+      
+      	let find = document.getElementById("find").style.display = "none"
+
+       		let back = document.getElementById("form").style.display = "flex"
+          
+        let about = document.getElementById("about").style.display="none"
+          
+      } 
+      function registerdonor2(){
+        let home = document.querySelector(".home").style.display="none"
+           let backgroumd = document.querySelector(".main-background").style.display ="none" 
+           
+           let form = document.querySelector(".registerform").style.display="none"
+    
+
+			let registerby = document.querySelector(".main-form").style.display = "flex"
+      
+      	let find = document.getElementById("find").style.display = "none"
+
+       		let back = document.getElementById("form").style.display = "none"
+      
+        let about = document.getElementById("about").style.display="none"
+          
+          }
+      
+      function about(){
+        let home = document.querySelector(".home").style.display="none"
+           let backgroumd = document.querySelector(".main-background").style.display ="none" 
+           
+           let form = document.querySelector(".registerform").style.display="none"
+    
+
+			let registerby = document.querySelector(".main-form").style.display = "none"
+      
+      	let find = document.getElementById("find").style.display = "none"
+
+       		let back = document.getElementById("form").style.display = "none"
+        let about = document.getElementById("about").style.display="block"
+        
+        
+                      }
+      
+        </script>
+</body>
+
+</html>
